@@ -8,7 +8,7 @@ Please cite our paper if our datasets or code are helpful to you ~
 
 
 ## Dataset
-* [QM9](https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/gdb9.tar.gz)
+* QM9: https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/gdb9.tar.gz
 
 
 ## Before Training
