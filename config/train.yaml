@@ -1,0 +1,83 @@
+data:
+  data: QM93D
+  dir: './data'
+  batch_size: 256
+  max_node_num: 29
+  max_feat_num: 5
+  init: atom
+
+sde:
+  x:
+    type: VE
+    beta_min: 0.1
+    beta_max: 0.9
+    num_scales: 1000
+  pos:
+    type: VE
+    beta_min: 0.1
+    beta_max: 0.9
+    num_scales: 1000
+  adj:
+    type: VE
+    beta_min: 0.1
+    beta_max: 0.9
+    num_scales: 1000
+
+model_x:
+  name: ScoreNetworkX
+  conv: EGNN
+  depth: 1
+  nhid: 16
+  egnn:
+    num_layers: 9
+    nhid: 32
+    normalization_factor: 4   # 1, 4, or 10
+    method: sum  # 'sum' or 'mean'
+
+model_pos:
+  name: ScoreNetworkP  # ScoreNetworkP or ScoreNetworkP_GMH
+  conv: EGNN
+  depth: 6
+  nhid: 16
+  adim: 32   # only used when muti-head(GMH)
+  egnn:
+    num_layers: 6
+    nhid: 32
+    normalization_factor: 4   # 1, 4, or 10
+    method: sum  # 'sum' or 'mean'
+  egnn_gmh:
+      num_layers: 1
+      nhid: 32  # should be same as model_pos.nhid
+      normalization_factor: 4   # 1, 4, or 10
+      method: sum  # 'sum' or 'mean'
+
+model_adj:
+  name: ScoreNetworkA
+  conv: EGNN
+  nhid: 16
+  adim: 32    # attention layer dim
+  num_heads: 4
+  layers: 3   # layers_num of Muti-Att
+  linears: 3  # layers_num of MLP
+  c_init: 2
+  c_hid: 8
+  c_final: 4
+  egnn:
+    num_layers: 1
+    nhid: 32
+    normalization_factor: 4   # 1, 4, or 10
+    method: sum  # 'sum' or 'mean'
+
+train:
+  name: test
+  num_epochs: 1500
+  save_interval: 50
+  print_interval: 1000
+  reduce_mean: False
+  lr: 0.001
+  lr_schedule: True
+  ema: 0.999
+  weight_decay: 0.0001
+  grad_norm: 1.0
+  lr_decay: 0.999
+  eps: 1.0e-5
