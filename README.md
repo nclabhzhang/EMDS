@@ -19,7 +19,7 @@ python data/preprocess_3d.py
 python data/split_generators.py
 ```
 
-### Configurations
+### Configs
 The configurations are provided on the config/ directory in YAML format.
 
 ### Training
