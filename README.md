@@ -5,6 +5,9 @@ Please cite our paper if our datasets or code are helpful to you ~
 
 ## Requirements
 * Python 3.7
+* pytorch 1.12.0
+* rdkit 2022.3.5
+* pyparsing 2.4.7
 
 
 ## Dataset
