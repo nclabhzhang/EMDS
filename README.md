@@ -1,7 +1,7 @@
 # EMDS
 This repository provides the implemention for the paper Equivariant Score-based Generative Diffusion Framework for 3D Molecules.
 
-Please cite our paper if our datasets or code are helpful to you ~
+Please cite our paper if our datasets or code are helpful to you ~ 😊
 
 ## Requirements
 * Python 3.7
