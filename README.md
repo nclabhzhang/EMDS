@@ -43,4 +43,5 @@ We thank their contributors and maintainers!
 ## Citation
 Please cite our paper if our datasets or code are helpful to you.
 
-H. Zhang, Y. Liu, X. Liu, C. Wang, and M. Guo, "Equivariant Score-based Generative Diffusion Framework for 3D Molecules", BMC Bioinformatics, 2024, DOI: 10.1186/s12859-024-05810-w
+H. Zhang, Y. Liu, X. Liu, C. Wang, and M. Guo, "Equivariant Score-based Generative Diffusion Framework for 3D Molecules", BMC Bioinformatics 25, 203 (2024), DOI: 10.1186/s12859-024-05810-w
+
